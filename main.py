@@ -39,7 +39,7 @@ def index():
             prediction=loaded_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]])
             print('prediction is', prediction)
       
-            return render_template('results.html',prediction=round(100*prediction[0]))
+            return render_template('results.html',prediction
         except Exception as e:
             print('The Exception message is: ',e)
             return 'something is wrong'
